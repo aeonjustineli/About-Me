@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autobiography</title>
+    <style>
+        body {
+            background-color: #ffe5ec;
+            font-family: "Trebuchet MS", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            color: #3d1b22;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        .horizontal-slider::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-slider::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+        }
+        .horizontal-slider::-webkit-scrollbar-thumb {
+            background: #feb3c4;
+            border-radius: 12px;
+        }
+        .nav-btn {
+            background-color: #feb3c4;
+            color: #3d1b22;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .nav-btn:hover {
+            background-color: #fca1b4;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="max-width: 1000px; margin: 0 auto 20px auto; width: 95%; display: flex; flex-direction: column; gap: 20px;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 20px; width: 100%;">
+            <img src="images/Index/Header.jpg" alt="Matcha Header Banner" style="flex: 1; height: 160px; object-fit: cover; border-radius: 12px;">
+
+            <div class="music-container" style="background-color: #a2ab38; backdrop-filter: blur(5px); border-radius: 12px; padding: 12px 15px; width: 280px; height: 160px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px rgba(0,0,0,0.05); color: #ffffff;">
+                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: bold;">Choose Your Song!!!</p>
+                    <div style="display: flex; gap: 8px;">
+                        <button id="shuffle-btn" style="background: none; border: none; font-size: 1rem; cursor: pointer; padding: 0; opacity: 0.6; transition: opacity 0.2s;">🔀</button>
+                        <button id="loop-btn" style="background: none; border: none; font-size: 1rem; cursor: pointer; padding: 0; opacity: 1; transition: opacity 0.2s;">🔁</button>
+                    </div>
+                </div>
+                
+                <select id="track-selector" style="width: 100%; padding: 6px; border-radius: 6px; border: none; background-color: #feb3c4; color: #333333; font-family: inherit; cursor: pointer; font-size: 0.85rem; font-weight: 500;">
+                    <option value="Music/girls.mp3">girls just wanna have fun</option>
+                    <option value="Music/tuesday.mp3">c u next tuesday</option>
+                    <option value="Music/pretty.mp3">pretty boy</option>
+                    <option value="Music/say.mp3">say it right</option>
+                    <option value="Music/oops.mp3">oops!... i did it again</option>
+                </select>
+                
+                <audio id="bg-music" src="Music/girls.mp3" controls style="width: 100%; height: 28px;"></audio>
+
+                <div style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin: 0;">
+                    <span style="font-size: 0.85rem; line-height: 1;">🔈</span>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5" style="accent-color: #feb3c4; cursor: pointer; width: 120px; margin: 0; padding: 0; display: block;">
+                    <span style="font-size: 0.85rem; line-height: 1;">🔊</span>
+                </div>
+            </div>
+        </div> 
+
+        <div class="horizontal-slider" style="width: 100%; height: 160px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow-x: scroll; overflow-y: hidden; display: flex; gap: 15px; box-sizing: border-box; padding: 15px;">
+            <img src="images/Index/a.jpg" alt="Photo A" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/b.jpg" alt="Photo B" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/c.jpg" alt="Photo C" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/d.jpg" alt="Photo D" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/e.jpg" alt="Photo E" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/f.jpg" alt="Photo F" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/g.jpg" alt="Photo G" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/h.jpg" alt="Photo H" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/i.jpg" alt="Photo I" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/j.jpg" alt="Photo J" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/k.jpg" alt="Photo K" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/l.jpg" alt="Photo L" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/m.jpg" alt="Photo M" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/n.jpg" alt="Photo N" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/o.jpg" alt="Photo O" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/p.jpg" alt="Photo P" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/q.jpg" alt="Photo Q" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/r.jpg" alt="Photo R" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/s.jpg" alt="Photo S" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/t.jpg" alt="Photo T" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/u.jpg" alt="Photo U" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/v.jpg" alt="Photo V" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/w.jpg" alt="Photo W" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/x.jpg" alt="Photo X" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/y.jpg" alt="Photo Y" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+            <img src="images/Index/z.jpg" alt="Photo Z" style="height: 100%; width: auto; border-radius: 8px; object-fit: cover;">
+        </div>
+
+        <div style="max-width: 1000px; margin: 20px auto 0 auto; width: 95%;">
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+            <a href="index.html" class="nav-btn" style="font-family: 'Trebuchet MS', sans-serif;">⁛ ࣪ ˖ Index</a>
+            <a href="home.html" class="nav-btn" style="font-family: 'Trebuchet MS', sans-serif;">⁛ ࣪ ˖ Home</a>
+            <a href="autobiography.html" class="nav-btn" style="font-family: 'Trebuchet MS', sans-serif;">⁛ ࣪ ˖ Autobiography</a>
+            <a href="gallery.html" class="nav-btn" style="font-family: 'Trebuchet MS', sans-serif;">⁛ ࣪ ˖ Gallery</a>
+            <a href="likes and dislikes.html" class="nav-btn" style="font-family: 'Trebuchet MS', sans-serif;">⁛ ࣪ ˖ Likes & Dislikes</a>
+        </div>
+    </div>
+
+    <div style="max-width: 1000px; margin: 0 auto; width: 95%; box-sizing: border-box; text-align: center;">
+        <h1 style="font-size: 40px; margin-top: 20px; margin-bottom: 15px; text-shadow: 1px 1px 2px rgba(0,0,0,0.05);">
+            𑣲⋆ My Autobiography ⋆˚
+        </h1>
+        
+        <p style="font-size: 1.1rem; line-height: 1.5; margin: 0 0 30px 0; opacity: 0.95;">
+            A little bit about who I am, where I came from, and where I'm going!
+        </p>
+
+        <div style="margin: 20px auto 30px auto; max-width: 200px;">
+            <img src="images/Autobiography/pfp.jpg" alt="Photo of me" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); object-fit: cover;">
+        </div>
+
+        <h2 style="font-size: 1.8rem; color: #3d1b22; margin-bottom: 15px;">𑣲 Hi, I'm Aeon Li!</h2>
+        
+        <p style="font-size: 1.05rem; line-height: 1.6; max-width: 700px; margin: 0 auto 15px auto; opacity: 0.95;">
+            Hiii!! Im Aeon Justine Li. My favorite color is pink, purple and orange. I grew up moving around between Manila, and Talisay City but we stayed here in Bacolod City the longest. My family consists of me, my 2 siblings, my mom, my dad and our dog named Shopee. Im currently studying Information Technology in Carlos Hilado Memorial State University, Alijis Campus because i was inspired by my aunt who also studied Information Technology!
+        </p>
+        
+        <div style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); border-radius: 12px; padding: 20px; margin: 30px auto; max-width: 600px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: left;">
+            <h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 15px; border-bottom: 2px dashed #feb3c4; padding-bottom: 5px; color: #3d1b22; text-align: center;"> Quick Facts</h2>
+ 
+        <div style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); border: 2px solid #feb3c4; border-radius: 16px; padding: 25px; margin: 30px auto; max-width: 600px; box-shadow: 0 8px 16px rgba(0,0,0,0.05); color: #3d1b22; font-family: 'Trebuchet MS', sans-serif;">
+    
+    <div style="text-align: center; margin-bottom: 25px;">
+        <span style="background-color: #a2ab38; color: #ffffff; padding: 6px 16px; font-size: 0.8rem; font-weight: bold; border-radius: 20px; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Character Profile // Level 1</span>
+        <h2 style="font-size: 2rem; margin: 10px 0 5px 0; letter-spacing: 1px;">Aeon Li ⊹ ࣪ ˖</h2>
+        <p style="margin: 0; font-size: 0.95rem; opacity: 0.7; font-style: italic;">"The Front-End Technomancer in Training"</p>
+    </div>
+
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start;">
+
+        <div style="flex: 1; min-width: 250px; background: rgba(255, 255, 255, 0.4); padding: 15px; border-radius: 12px; box-sizing: border-box;">
+            <h3 style="font-size: 1.1rem; margin-top: 0; margin-bottom: 12px; border-bottom: 2px dashed #feb3c4; padding-bottom: 4px; color: #a2ab38;">Character Data</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; line-height: 1.8;">
+                <tr><td style="font-weight: bold; width: 45%;"> Age:</td><td>18 Years (Lv. 18)</td></tr>
+                <tr><td style="font-weight: bold;"> Birthday:</td><td>May 4, 2008</td></tr>
+                <tr><td style="font-weight: bold;"> Blood Type:</td><td>Type AB-</td></tr>
+                <tr><td style="font-weight: bold;"> Guild/Family:</td><td>Li Family (5 Members)</td></tr>
+                <tr><td style="font-weight: bold;"> Fav Color:</td><td>Soft Pink & Pastel Green</td></tr>
+                <tr><td style="font-weight: bold;"> Main Fuel:</td><td>Music & Food</td></tr>
+                <tr><td style="font-weight: bold;"> Section:</td><td>BSIT 1-C</td></tr>
+            </table>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; background: rgba(255, 255, 255, 0.4); padding: 15px; border-radius: 12px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+            <h3 style="font-size: 1.1rem; margin-top: 0; margin-bottom: 4px; border-bottom: 2px dashed #feb3c4; padding-bottom: 4px; color: #a2ab38;"> Combat Attributes</h3>
+            
+            <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: bold; margin-bottom: 3px;">
+                    <span> CREATIVITY (Aesthetics & Design)</span>
+                    <span>92/100</span>
+                </div>
+                <div style="width: 100%; background: rgba(255,255,255,0.5); height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 92%; background: #feb3c4; height: 100%;"></div>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: bold; margin-bottom: 3px;">
+                    <span> LOGIC (Coding & Math Logic)</span>
+                    <span>65/100</span>
+                </div>
+                <div style="width: 100%; background: rgba(255,255,255,0.5); height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 65%; background: #a2ab38; height: 100%;"></div>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: bold; margin-bottom: 3px;">
+                    <span> STAMINA (Energy Levels)</span>
+                    <span>35/100</span>
+                </div>
+                <div style="width: 100%; background: rgba(255,255,255,0.5); height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 35%; background: #feb3c4; height: 100%;"></div>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: bold; margin-bottom: 3px;">
+                    <span> FOCUS (Music Concentration)</span>
+                    <span>98/100</span>
+                </div>
+                <div style="width: 100%; background: rgba(255,255,255,0.5); height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 98%; background: #a2ab38; height: 100%;"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="margin-top: 20px; background: rgba(255, 255, 255, 0.4); padding: 15px; border-radius: 12px; box-sizing: border-box;">
+        <h3 style="font-size: 1.1rem; margin-top: 0; margin-bottom: 12px; border-bottom: 2px dashed #feb3c4; padding-bottom: 4px; color: #a2ab38; text-align: center;">Passive Skill Tree Traits</h3>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; line-height: 1.4;">
+            <div>• <b> Music Resonance:</b> Focus and HTML scripting accuracy increase by 20% when background music player is active.</div>
+            <div>• <b> Foodie:</b> Consuming any kind of snack instantly completely recovers fatigue stats.</div>
+            <div>• <b> 4 hour nap:</b> Gains 100% energy for editing custom interface classes.</div>
+        </div>
+    </div>
+
+</div>
+
+     <script>
+        const music = document.getElementById('bg-music');
+        const volumeSlider = document.getElementById('volume-slider');
+        const trackSelector = document.getElementById('track-selector');
+        const shuffleBtn = document.getElementById('shuffle-btn');
+        const loopBtn = document.getElementById('loop-btn');
+
+        let isShuffle = false;
+        let isLoopOne = true;
+
+        music.volume = volumeSlider.value;
+        volumeSlider.addEventListener('input', function() {
+            music.volume = this.value;
+        });
+
+        trackSelector.addEventListener('change', function() {
+            changeTrack(this.value);
+        });
+
+        function changeTrack(src) {
+            const wasPlaying = !music.paused;
+            music.src = src;
+            music.load();
+            if (wasPlaying) {
+                music.play();
+            }
+        }
+
+        shuffleBtn.addEventListener('click', function() {
+            isShuffle = !isShuffle;
+            shuffleBtn.style.opacity = isShuffle ? "1" : "0.6";
+            if (isShuffle && isLoopOne) {
+                isLoopOne = false;
+                loopBtn.style.opacity = "0.6";
+                loopBtn.innerText = "⇄";
+            }
+        });
+
+        loopBtn.addEventListener('click', function() {
+            if (isLoopOne) {
+                isLoopOne = false;
+                loopBtn.style.opacity = "0.6";
+                loopBtn.innerText = "⇄";
+            } else {
+                isLoopOne = true;
+                loopBtn.style.opacity = "1";
+                loopBtn.innerText = "⇄";
+                if (isShuffle) {
+                    isShuffle = false;
+                    shuffleBtn.style.opacity = "0.6";
+                }
+            }
+        });
+
+        music.addEventListener('ended', function() {
+            if (isLoopOne) {
+                music.play();
+            } else if (isShuffle) {
+                const options = trackSelector.options;
+                const randomIndex = Math.floor(Math.random() * options.length);
+                trackSelector.selectedIndex = randomIndex;
+                changeTrack(options[randomIndex].value);
+                music.play();
+            } else {
+                let nextIndex = trackSelector.selectedIndex + 1;
+                if (nextIndex >= trackSelector.options.length) {
+                    nextIndex = 0;
+                }
+                trackSelector.selectedIndex = nextIndex;
+                changeTrack(trackSelector.options[nextIndex].value);
+                music.play();
+            }
+        });
+    </script>
